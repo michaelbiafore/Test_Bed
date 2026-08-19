@@ -21,13 +21,13 @@ The whole point of this repo is that these four are active simultaneously. Each 
 | Framework | Layer | How it's installed | You invoke it via |
 |-----------|-------|--------------------|-------------------|
 | **OpenSpec** | Spec — the *what/why*, front-loaded and reviewable | **Per-repo, committed** (`openspec/`, `.claude/skills/openspec-*`, `.claude/commands/opsx/`) | `/openspec-propose`, `/openspec-apply-change`, `/openspec-archive-change`, `/openspec-explore`, `/openspec-sync-specs`, `/openspec-update-change` (canonical alias: `/opsx:*`) |
-| **Compound Engineering** | Workflow loop — Plan → Work → Review → Compound | Global plugin (`~/.claude`) | `/ce-plan`, `/ce-work`, `/ce-code-review`, `/ce-doc-review`, `/ce-compound`, `/ce-commit*`, `/lfg` (full autonomous run), and other `/ce-*` |
+| **Compound Engineering** | Workflow loop — Plan → Work → Review → Compound | Global plugin | `/ce-plan`, `/ce-work`, `/ce-code-review`, `/ce-doc-review`, `/ce-compound`, `/ce-commit*`, `/lfg` (full autonomous run), and other `/ce-*` |
 | **Superpowers** | Engineering discipline — the *how* (TDD, subagent-driven dev) | Global plugin | **Auto-triggers**; also `superpowers:*` skills (brainstorming, systematic-debugging, test-driven-development, verification-before-completion, …) |
 | **karpathy-skills** | Guardrails — the *don't* (no silent assumptions, no over-engineering, no orthogonal edits, define verifiable success) | Global plugin | **Always-on** via `andrej-karpathy-skills:karpathy-guidelines` |
 
 Superpowers and karpathy-skills are **not invoked explicitly** — they shape every response. Do not restate or re-implement their rules; let the skills do their job and follow them.
 
-`.claude/settings.local.json` is what pins this repo to the bundle: it enables the `superpowers` and `andrej-karpathy-skills` plugins (compound-engineering is enabled globally). If a `/ce-*` or `/openspec-*` command doesn't autocomplete, the plugins/commands load at session start — restart the session or `/reload-plugins`; don't assume the framework is broken.
+`.claude/settings.local.json` (per-user, git-ignored) is what pins this repo to the bundle: the Part B `/plugin install` commands project-enable all three plugins — `superpowers`, `compound-engineering`, and `andrej-karpathy-skills` — for this repo, keeping them project-scoped on purpose rather than globally enabled. If a `/ce-*` or `/openspec-*` command doesn't autocomplete, the plugins/commands load at session start — restart the session or `/reload-plugins`; don't assume the framework is broken.
 
 ## The intended end-to-end workflow
 
