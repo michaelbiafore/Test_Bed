@@ -99,3 +99,23 @@ If `/ce-*` or `/openspec-*` don't autocomplete but the tools *are* installed, co
 ---
 
 *This file is meant to be loaded into Claude's context every session (imported from `CLAUDE.md`). Copy it into every new project alongside a `CLAUDE.md` that imports it — see `README.md`. If you're reading it, follow it.*
+
+---
+
+## Appendix — stage names, cross-referenced (not renamed)
+
+If you're arriving from an external delivery proposal (the "ZZ" comparison in `Close_the_Gap_*`),
+its six stage names map onto this playbook's pipeline as below. **The canonical steps above are not
+renamed** — this table is only a cross-reference so the two vocabularies line up.
+
+| ZZ stage | This playbook's step | Tool(s) |
+|----------|----------------------|---------|
+| 1. Process breakdown & scope lock | Step 1 — Spec | `/openspec-propose` |
+| 2. Executable spec + TDD | Step 2 — Plan (+ golden cases, upgrade Phase 3) | `/ce-plan` + golden-test authoring |
+| 3. AI build + automated tests | Step 3 — Build test-first | `/ce-work`, Superpowers, karpathy |
+| 4. Business trial + fast iteration | Step 4.5 — Business trial *(Track E only; upgrade Phase 5)* | Decision log |
+| 5. Go-live | Step 4 — Review + merge (risk-tier + CI gates) | `/ce-code-review`, `golden-gate` CI |
+| 6. Reuse | Steps 5–6 — Compound + Archive | `/ce-compound`, `/openspec-archive-change` |
+
+A stage with nothing in its "step" column would be a stage nobody has built yet — currently the only
+one gated behind future work is Step 4.5 (the Track E business trial).

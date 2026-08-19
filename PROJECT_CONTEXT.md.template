@@ -1,0 +1,30 @@
+# PROJECT_CONTEXT.md — [project name]
+
+*Claude: read this alongside `SE_Discipline.md` before any work. Human: fill in the sections below
+before the first `/openspec-propose`. Blank sections mean Claude cannot tell "decided" from
+"plausible-but-guessed" — leave things marked "TBD, ask before assuming" rather than inventing them.*
+
+This is the **Track S (pure-software) context template** — for work where *you already know what to
+build* and can supply the acceptance/golden cases yourself. It deliberately omits business-context /
+requirements sections.
+
+> **Building for a business need that isn't defined yet?** (business rules unknown at the outset,
+> golden cases must be elicited from a business owner) — that's **Track E**. Turn on the optional
+> product-definition front-end (`product-definition/`, upgrade Phase 5), which adds the full
+> business-context, rules, and requirement-owner sections and hands its output into
+> `/openspec-propose`. See `Plans/PLAN_ZZ_Upgrade_01.md`.
+
+---
+
+## Technical
+Architecture, code layout, interface conventions, data-store design — **only what's decided.**
+Leave undecided things marked "TBD, ask before assuming."
+
+## Tests / commands
+How to run tests, where golden cases live (`tests/golden/`, upgrade Phase 3), what "passing" means,
+and the regression scope.
+
+## Risk boundaries
+**See `RISK_TIERS.md`** — the single source of truth for which paths Claude may edit directly, which
+need confirmation, and which are off-limits. Do not restate the tiers here; just note anything
+project-specific the reader must know (e.g. "the whole `pricing/` tree is High").

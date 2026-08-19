@@ -6,6 +6,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 **Before doing any development work in this repo, read and follow `@SE_Discipline.md`.** It is the operating playbook: it tells you to run spec-first (OpenSpec) and test-first (Superpowers TDD) with human approval checkpoints, so that even a non-expert can just state a goal in plain language and let you drive the tools. Spec first, test first, code last — surgical diffs, verify before claiming done.
 
+Also consult **`RISK_TIERS.md`** (the single source of truth for which paths Claude may edit freely, which need confirmation, and which are off-limits) and, when a project has filled it in, **`PROJECT_CONTEXT.md`** (the project's technical + test context). During Step-0 triage, if a change touches a **High** or **Off-limits** tier, escalate to human review before editing — do not auto-proceed. When work is headed for Dymon PROD, record the outcome (and any IT rework) in **`PROMOTION_LOG.md`**.
+
 ## What this repo is
 
 `Test_Bed` is a **standalone git repo** (`github.com/michaelbiafore/Test_Bed`) used as a clean sandbox to validate one specific bundle of software-engineering-for-AI frameworks working *together*. It is **not** part of the parent `SE_for_AI/` workspace's git history — do not commit here expecting it to land in the survey workspace, and do not treat the parent `SE_for_AI/CLAUDE.md` (which describes a collection of vendored forks) as describing this repo.

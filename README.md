@@ -164,6 +164,22 @@ Once set up, you don't manage any of this. You just talk to Claude:
 
 ---
 
+## Two situations this handles (with or without a defined product)
+
+- **You already know what to build** (you can describe the feature and give a few concrete
+  "should do exactly this" examples). This is the default — just state the goal and go. Claude uses
+  `PROJECT_CONTEXT.md` for technical context and `RISK_TIERS.md` for what it may touch.
+- **The business need isn't pinned down yet** (someone has a problem but hasn't defined the rules,
+  and the correct examples have to be *drawn out* of a business owner first). For this, an **optional
+  product-definition front-end** runs a short elicitation step *before* the spec — so the rules and
+  test cases are captured, not guessed. It's off by default; turn it on per project when you need it.
+  (Being built in `Plans/PLAN_ZZ_Upgrade_01.md`, Phase 5.)
+
+When work is promoted toward production, `PROMOTION_LOG.md` records what (if anything) central IT
+sent back — so each round makes the next one less likely to need rework.
+
+---
+
 ## Where this came from
 
 The full research behind *why* these four tools (and not others) is in [`SE_for_AI_09.md`](./SE_for_AI_09.md) — a survey of the leading software-engineering-for-AI frameworks. [`WHAT_THIS_DIR_IS.md`](./WHAT_THIS_DIR_IS.md) explains the goal: help builders produce code conformant enough to promote to production with minimal rework. [`CLAUDE.md`](./CLAUDE.md) is orientation for Claude itself; [`SE_Discipline.md`](./SE_Discipline.md) is the operating playbook Claude follows on every task.
