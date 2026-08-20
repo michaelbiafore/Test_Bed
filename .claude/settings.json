@@ -1,0 +1,45 @@
+{
+  "permissions": {
+    "allow": [
+      "Edit(src/ui/**)",
+      "Edit(src/utils/**)",
+      "Write(src/ui/**)",
+      "Write(src/utils/**)"
+    ],
+    "ask": [
+      "Edit(**/*.audit.*)",
+      "Edit(src/rules/**)",
+      "Edit(src/validation/**)",
+      "Write(**/*.audit.*)",
+      "Write(src/rules/**)",
+      "Write(src/validation/**)"
+    ],
+    "deny": [
+      "Bash(*.env*)",
+      "Bash(*prod_data*)",
+      "Bash(*secrets*)",
+      "Edit(**/.env*)",
+      "Edit(**/prod_data/**)",
+      "Edit(secrets/**)",
+      "Read(**/.env*)",
+      "Read(**/prod_data/**)",
+      "Read(secrets/**)",
+      "Write(**/.env*)",
+      "Write(**/prod_data/**)",
+      "Write(secrets/**)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -NoProfile -ExecutionPolicy RemoteSigned -File \"$CLAUDE_PROJECT_DIR/scripts/warn-if-audit-path.ps1\""
+          }
+        ]
+      }
+    ]
+  }
+}

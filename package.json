@@ -1,0 +1,11 @@
+{
+  "name": "test-bed",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "SE-for-AI Test_Bed — PROD-promotion spine tooling",
+  "scripts": {
+    "test": "node --test",
+    "gen:settings": "node scripts/gen-settings.mjs"
+  }
+}

@@ -35,7 +35,7 @@ but review it).
 | `src/validation/**` | High |
 | `**/*.audit.*` | High |
 | `secrets/**` | Off-limits |
-| `.env*` | Off-limits |
+| `**/.env*` | Off-limits |
 | `**/prod_data/**` | Off-limits |
 
 > The rows above are **placeholder examples** (they mirror the reference layout, not a real app yet).

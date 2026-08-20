@@ -1,0 +1,30 @@
+name: golden-gate
+
+# Merge-gating golden + regression tests (PLAN_ZZ_Upgrade_01.md, item R3).
+# Runs on every PR. NOT YET a required check — Phase 4 marks it required via branch
+# protection, once Phase 3 supplies a real reference app + test command.
+
+on:
+  pull_request:
+    branches: [master]
+
+jobs:
+  golden:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Generator unit tests already exist and run today.
+      - name: Unit tests (generator)
+        run: node --test
+
+      # TODO(phase-3): replace this placeholder with the reference app's real
+      # golden + regression runner (e.g. `npm test` against tests/golden/).
+      # Kept as an explicit green no-op so the workflow is committable and honest
+      # about not yet gating anything.
+      - name: Golden + regression (placeholder until Phase 3)
+        run: echo "placeholder — Phase 3 wires the real golden/regression runner"
