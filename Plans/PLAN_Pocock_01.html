@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang xml:lang>
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Matt Pocock Skills for the Test_Bed Bundle</title>
+  <style>
+html {
+color: #1a1a1a;
+background-color: #fdfdfd;
+}
+body {
+margin: 0 auto;
+max-width: 36em;
+padding-left: 50px;
+padding-right: 50px;
+padding-top: 50px;
+padding-bottom: 50px;
+hyphens: auto;
+overflow-wrap: break-word;
+text-rendering: optimizeLegibility;
+font-kerning: normal;
+}
+@media (max-width: 600px) {
+body {
+font-size: 0.9em;
+padding: 12px;
+}
+h1 {
+font-size: 1.8em;
+}
+}
+@media print {
+html {
+background-color: white;
+}
+body {
+background-color: transparent;
+color: black;
+font-size: 12pt;
+}
+p, h2, h3 {
+orphans: 3;
+widows: 3;
+}
+h2, h3, h4 {
+page-break-after: avoid;
+}
+}
+p {
+margin: 1em 0;
+}
+a {
+color: #1a1a1a;
+}
+a:visited {
+color: #1a1a1a;
+}
+img {
+max-width: 100%;
+}
+svg {
+height: auto;
+max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+margin-top: 1.4em;
+}
+h5, h6 {
+font-size: 1em;
+font-style: italic;
+}
+h6 {
+font-weight: normal;
+}
+ol, ul {
+padding-left: 1.7em;
+margin-top: 1em;
+}
+li > ol, li > ul {
+margin-top: 0;
+}
+blockquote {
+margin: 1em 0 1em 1.7em;
+padding-left: 1em;
+border-left: 2px solid #e6e6e6;
+color: #606060;
+}
+code {
+font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+font-size: 85%;
+margin: 0;
+hyphens: manual;
+}
+pre {
+margin: 1em 0;
+overflow: auto;
+}
+pre code {
+padding: 0;
+overflow: visible;
+overflow-wrap: normal;
+}
+.sourceCode {
+background-color: transparent;
+overflow: visible;
+}
+hr {
+border: none;
+border-top: 1px solid #1a1a1a;
+height: 1px;
+margin: 1em 0;
+}
+table {
+margin: 1em 0;
+border-collapse: collapse;
+width: 100%;
+overflow-x: auto;
+display: block;
+font-variant-numeric: lining-nums tabular-nums;
+}
+table caption {
+margin-bottom: 0.75em;
+}
+tbody {
+margin-top: 0.5em;
+border-top: 1px solid #1a1a1a;
+border-bottom: 1px solid #1a1a1a;
+}
+th {
+border-top: 1px solid #1a1a1a;
+padding: 0.25em 0.5em 0.25em 0.5em;
+}
+td {
+padding: 0.125em 0.5em 0.25em 0.5em;
+}
+header {
+margin-bottom: 4em;
+text-align: center;
+}
+#TOC li {
+list-style: none;
+}
+#TOC ul {
+padding-left: 1.3em;
+}
+#TOC > ul {
+padding-left: 0;
+}
+#TOC a:not(:hover) {
+text-decoration: none;
+}
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+
+ul.task-list[class]{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+font-size: inherit;
+width: 0.8em;
+margin: 0 0.8em 0.2em -1.6em;
+vertical-align: middle;
+}
+.display.math{display: block; text-align: center; margin: 0.5rem auto;}
+
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+  <style>
+:root {
+--accent: #059669;
+--accent-dim: #34d399;
+--text: #1f2933;
+--text-dim: #52606d;
+--bg: #ffffff;
+--bg-soft: #f5f7fa;
+--border: #e2e8f0;
+}
+html { scroll-behavior: smooth; }
+body {
+font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+color: var(--text);
+background: var(--bg);
+line-height: 1.65;
+max-width: 880px;
+margin: 0 auto;
+padding: 3rem 1.5rem 6rem;
+font-size: 17px;
+}
+h1 {
+font-size: 2.1rem;
+line-height: 1.2;
+letter-spacing: -0.5px;
+border-bottom: 3px solid var(--accent);
+padding-bottom: 0.5rem;
+margin-bottom: 1rem;
+}
+h2 {
+font-size: 1.5rem;
+margin-top: 2.6rem;
+padding-top: 1.2rem;
+border-top: 1px solid var(--border);
+color: #0f172a;
+letter-spacing: -0.3px;
+}
+h3 {
+font-size: 1.18rem;
+margin-top: 1.8rem;
+color: var(--accent);
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+h2#table-of-contents + ul { background: var(--bg-soft); border: 1px solid var(--border); border-radius: 10px; padding: 1rem 1.4rem 1rem 2.4rem; }
+h2#table-of-contents { border-top: none; }
+ul { margin: 0.4rem 0; }
+li { margin: 0.15rem 0; }
+img {
+max-width: 100%;
+height: auto;
+display: block;
+margin: 1.4rem auto 0.6rem;
+border: 1px solid var(--border);
+border-radius: 8px;
+box-shadow: 0 4px 16px rgba(15, 23, 42, 0.10);
+}
+p > em:only-child { color: var(--text-dim); font-size: 0.85rem; letter-spacing: 0.5px; }
+blockquote {
+border-left: 4px solid var(--accent);
+margin: 1.3rem 0;
+padding: 0.4rem 0 0.4rem 1.2rem;
+color: #0f172a;
+font-style: italic;
+background: var(--bg-soft);
+border-radius: 0 8px 8px 0;
+}
+code {
+background: #eef2f7;
+padding: 0.12em 0.4em;
+border-radius: 4px;
+font-size: 0.88em;
+font-family: "SF Mono", "Fira Code", Consolas, monospace;
+}
+table { border-collapse: collapse; width: 100%; margin: 1.4rem 0; font-size: 0.95rem; }
+th, td { border: 1px solid var(--border); padding: 0.6rem 0.8rem; text-align: left; vertical-align: top; }
+th { background: var(--accent); color: #fff; }
+tr:nth-child(even) td { background: var(--bg-soft); }
+hr { border: none; border-top: 1px solid var(--border); margin: 2.2rem 0; }
+strong { color: #0f172a; }
+</style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Matt Pocock Skills for the Test_Bed Bundle</h1>
+</header>
+<h1 id="matt-pocock-skills-for-the-test_bed-bundle">Matt Pocock Skills
+for the Test_Bed Bundle</h1>
+<p><strong>Source:</strong> Mandate
+<code>Mandates/Pocock_MANDATE_01.md</code> <strong>Analyst:</strong>
+Claude Opus 5, working in <code>Test_Bed</code> on branch
+<code>br_Pocock</code> <strong>Repo under review:</strong>
+<code>A:\Packages\External_Repos\POCOCK_skills</code>
+(<code>mattpocock/skills</code>, v1.2.3, MIT, 25 promoted skills)
+<strong>Evidence base:</strong> 4 formatted transcripts (~43,000 words)
+plus every <code>SKILL.md</code> in the <code>engineering/</code> and
+<code>productivity/</code> buckets</p>
+<blockquote>
+<p>This document selects a high-priority subset of Matt Pocock’s agent
+skills for addition to <code>Test_Bed</code>’s existing four-framework
+bundle, and specifies how to install them and how to make the top-level
+Claude agent aware of them. Three of the four source transcripts argue
+<strong>for</strong> the skills (Pocock’s own conference talk, workshop,
+and long-form interview); the fourth is Theo’s working review, which is
+sympathetic but critical. Where they disagree, the disagreement is
+recorded rather than smoothed over. Selection is deliberately
+conservative: the governing constraint is that the set must be small
+enough to actually use, and must not duplicate what
+<code>Test_Bed</code> already runs.</p>
+</blockquote>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ul>
+<li><a href="#why-this-list-is-short">Why This List Is Short</a>
+<ul>
+<li><a href="#procedures-and-abilities">Procedures and
+Abilities</a></li>
+<li><a href="#every-ability-costs-context">Every Ability Costs
+Context</a></li>
+<li><a href="#the-four-tests-i-applied">The Four Tests I
+Applied</a></li>
+</ul></li>
+<li><a href="#what-the-bundle-already-covers">What the Bundle Already
+Covers</a></li>
+<li><a href="#the-selected-set-at-a-glance">The Selected Set at a
+Glance</a></li>
+<li><a href="#tier-a-alignment-before-any-code">Tier A Alignment Before
+Any Code</a>
+<ul>
+<li><a href="#grill-me-and-grilling">grill-me and grilling</a></li>
+<li><a href="#grill-with-docs-and-domain-modeling">grill-with-docs and
+domain-modeling</a></li>
+</ul></li>
+<li><a href="#tier-b-design-and-architecture">Tier B Design and
+Architecture</a>
+<ul>
+<li><a href="#codebase-design">codebase-design</a></li>
+<li><a href="#improve-codebase-architecture">improve-codebase-architecture</a></li>
+</ul></li>
+<li><a href="#tier-c-build-and-debug">Tier C Build and Debug</a>
+<ul>
+<li><a href="#tdd">tdd</a></li>
+<li><a href="#diagnosing-bugs">diagnosing-bugs</a></li>
+<li><a href="#wizard">wizard</a></li>
+</ul></li>
+<li><a href="#tier-d-working-with-the-agent">Tier D Working With the
+Agent</a>
+<ul>
+<li><a href="#writing-for-agents">writing-for-agents</a></li>
+<li><a href="#wait-what">wait-what</a></li>
+<li><a href="#handoff">handoff</a></li>
+</ul></li>
+<li><a href="#what-i-left-out-and-why">What I Left Out and Why</a></li>
+<li><a href="#conflicts-to-settle-before-installing">Conflicts to Settle
+Before Installing</a>
+<ul>
+<li><a href="#two-debugging-disciplines-firing-at-once">Two Debugging
+Disciplines Firing at Once</a></li>
+<li><a href="#two-philosophies-of-control">Two Philosophies of
+Control</a></li>
+<li><a href="#context-load">Context Load</a></li>
+<li><a href="#house-style">House Style</a></li>
+</ul></li>
+<li><a href="#installation">Installation</a>
+<ul>
+<li><a href="#choosing-the-install-route">Choosing the Install
+Route</a></li>
+<li><a href="#step-1-install-the-selected-skills">Step 1 Install the
+Selected Skills</a></li>
+<li><a href="#step-2-seed-context.md">Step 2 Seed CONTEXT.md</a></li>
+<li><a href="#step-3-skip-the-setup-skill-deliberately">Step 3 Skip the
+Setup Skill Deliberately</a></li>
+<li><a href="#step-4-verify">Step 4 Verify</a></li>
+</ul></li>
+<li><a href="#proposed-changes-to-claude.md">Proposed Changes to
+CLAUDE.md</a></li>
+<li><a href="#proposed-changes-to-se_discipline.md">Proposed Changes to
+SE_Discipline.md</a></li>
+<li><a href="#decisions-taken">Decisions Taken</a></li>
+<li><a href="#key-takeaways">Key Takeaways</a></li>
+</ul>
+<hr />
+<h2 id="why-this-list-is-short">Why This List Is Short</h2>
+<p>The mandate asks for a set small enough to use in one real project.
+That constraint is not a convenience, it is the single most important
+design rule in Pocock’s own repo, and he states it plainly in the
+interview.</p>
+<h3 id="procedures-and-abilities">Procedures and Abilities</h3>
+<p>Pocock splits every skill on one axis: who can invoke it.</p>
+<blockquote>
+<p>You can think of there being two types of skills. There are skills
+that are <strong>procedures</strong>, skills that you intend to run
+yourself. And then there are skills that are more like
+<strong>abilities</strong>, things that you intend the model to invoke
+itself.</p>
+</blockquote>
+<p>A procedure carries <code>disable-model-invocation: true</code> in
+its frontmatter and is reachable only when the human types its name. An
+ability omits that flag and can fire on its own. Pocock strongly prefers
+procedures:</p>
+<blockquote>
+<p>I’ve always preferred to be in control myself, because I know my
+skills, I know my abilities. <strong>I don’t want to delegate my
+thinking to the model.</strong></p>
+</blockquote>
+<p>He names the contrast directly: <strong>Superpowers</strong>, which
+<code>Test_Bed</code> already runs, takes the opposite position and
+prefers the model to be in control. That is a genuine architectural
+disagreement between a framework this repo already has and the one being
+proposed, and it is dealt with under <a href="#conflicts-to-settle-before-installing">Conflicts to Settle Before
+Installing</a>.</p>
+<h3 id="every-ability-costs-context">Every Ability Costs Context</h3>
+<p>The reason not to install all 25 is mechanical, not aesthetic:</p>
+<blockquote>
+<p>Skills are really hard to write, especially because every single
+skill that you write <strong>leaks a description into the context
+window</strong>. Let’s say we have a hundred different skills, you’re
+going to be leaking a hundred descriptions into the context window.</p>
+</blockquote>
+<p>A user-invoked skill does not pay this cost, because its description
+is withheld from the model. So the shape of a good set is: <strong>a few
+procedures the human drives, plus only those abilities that genuinely
+earn a permanent slot in every context window.</strong> The selection
+below is 5 procedures and 7 abilities.</p>
+<p>Theo’s review lands on the same conclusion from the opposite
+direction, and it is the sharpest warning in the whole evidence
+base:</p>
+<blockquote>
+<p><strong>You do not get anything out of blindly copying other people’s
+setups.</strong> You should treat these things not as a set of steps to
+take, rather as a set of information to consider as you build your own
+systems for coding with AI.</p>
+</blockquote>
+<h3 id="the-four-tests-i-applied">The Four Tests I Applied</h3>
+<p>Each candidate had to pass all four:</p>
+<ol type="1">
+<li><strong>Gap, not overlap.</strong> Does it do something the existing
+four frameworks do not already do? <code>Test_Bed</code>’s whole thesis
+is that its four layers compose. A fifth layer that re-implements layer
+three is a liability.</li>
+<li><strong>Impact on code quality or speed.</strong> Traceable to a
+named failure mode in the transcripts, not to novelty.</li>
+<li><strong>Affordable.</strong> An ability must be worth its
+description in every context window. A procedure must be worth a slot in
+the human’s memory.</li>
+<li><strong>Fits a non-expert driver.</strong>
+<code>SE_Discipline.md</code> promises that the human “just states what
+they want in plain English.” A skill that assumes a fluent senior
+engineer at the keyboard fails here.</li>
+</ol>
+<hr />
+<h2 id="what-the-bundle-already-covers">What the Bundle Already
+Covers</h2>
+<p>This map is what drove most of the exclusions. <code>Test_Bed</code>
+currently runs OpenSpec, Compound Engineering, Superpowers, and
+karpathy-skills simultaneously.</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Concern</th>
+<th>Already covered by</th>
+<th>Pocock equivalent</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Spec artifacts, reviewable and committed</td>
+<td>OpenSpec <code>/openspec-propose</code></td>
+<td><code>to-spec</code></td>
+<td><strong>Overlap, exclude</strong></td>
+</tr>
+<tr>
+<td>Breaking a spec into work items</td>
+<td>OpenSpec <code>tasks.md</code>, CE <code>/ce-plan</code></td>
+<td><code>to-tickets</code></td>
+<td><strong>Overlap, exclude</strong></td>
+</tr>
+<tr>
+<td>Driving implementation</td>
+<td>CE <code>/ce-work</code>, <code>/openspec-apply-change</code></td>
+<td><code>implement</code></td>
+<td><strong>Overlap, exclude</strong></td>
+</tr>
+<tr>
+<td>Multi-agent code review</td>
+<td>CE <code>/ce-code-review</code> (40+ persona agents)</td>
+<td><code>code-review</code></td>
+<td><strong>Overlap, exclude</strong></td>
+</tr>
+<tr>
+<td>Test-first discipline</td>
+<td>Superpowers <code>test-driven-development</code></td>
+<td><code>tdd</code></td>
+<td><strong>Partial, include as reference</strong></td>
+</tr>
+<tr>
+<td>Root-cause debugging</td>
+<td>Superpowers <code>systematic-debugging</code></td>
+<td><code>diagnosing-bugs</code></td>
+<td><strong>Partial, include with precedence rule</strong></td>
+</tr>
+<tr>
+<td>Requirements exploration</td>
+<td>Superpowers <code>brainstorming</code>, CE
+<code>/ce-brainstorm</code></td>
+<td><code>grilling</code></td>
+<td><strong>Partial, include and promote</strong></td>
+</tr>
+<tr>
+<td>Captured learnings</td>
+<td>CE <code>/ce-compound</code>, <code>CONCEPTS.md</code></td>
+<td><code>domain-modeling</code></td>
+<td><strong>Partial, include</strong></td>
+</tr>
+<tr>
+<td>Scope and over-engineering guardrails</td>
+<td>karpathy-guidelines</td>
+<td>(none)</td>
+<td>Covered</td>
+</tr>
+<tr>
+<td><strong>Deep-module design vocabulary</strong></td>
+<td><strong>nothing</strong></td>
+<td><code>codebase-design</code></td>
+<td><strong>Pure gap, include</strong></td>
+</tr>
+<tr>
+<td><strong>Periodic architecture survey</strong></td>
+<td><strong>nothing</strong></td>
+<td><code>improve-codebase-architecture</code></td>
+<td><strong>Pure gap, include</strong></td>
+</tr>
+<tr>
+<td><strong>Writing agent-facing documents</strong></td>
+<td><strong>nothing</strong></td>
+<td><code>writing-for-agents</code></td>
+<td><strong>Pure gap, include</strong></td>
+</tr>
+<tr>
+<td><strong>Human-only setup procedures</strong></td>
+<td><strong>nothing</strong></td>
+<td><code>wizard</code></td>
+<td><strong>Pure gap, include</strong></td>
+</tr>
+<tr>
+<td><strong>Repair of a confusing agent reply</strong></td>
+<td><strong>nothing</strong></td>
+<td><code>wait-what</code></td>
+<td><strong>Pure gap, include</strong></td>
+</tr>
+<tr>
+<td><strong>Cross-session context handoff</strong></td>
+<td><strong>nothing</strong></td>
+<td><code>handoff</code></td>
+<td><strong>Pure gap, include</strong></td>
+</tr>
+</tbody>
+</table>
+<p>The five pure gaps are the strongest part of the case for adding
+Pocock at all. Everything in the “overlap” rows is the reason the case
+is not for adding all 25.</p>
+<hr />
+<h2 id="the-selected-set-at-a-glance">The Selected Set at a Glance</h2>
+<p>Twelve skills. Six are typed by the human; six fire on their own or
+are pulled in by another skill.</p>
+<blockquote>
+<p><strong>Decided 2026-09-16</strong>
+(<code>Mandates/Pocock_MANDATE_02.md</code>): <code>wizard</code> ships
+<strong>user-invoked</strong> rather than model-invoked, so it costs
+nothing in context but stays available when a promotion needs it.
+<code>writing-for-agents</code> stays model-invoked. See <a href="#decisions-taken">Decisions Taken</a>.</p>
+</blockquote>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Invocation</th>
+<th>Reaches for</th>
+<th>Where it lands in the pipeline</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>grill-me</strong></td>
+<td>user</td>
+<td><code>grilling</code></td>
+<td>Before Step 1, replaces plan mode</td>
+</tr>
+<tr>
+<td><strong>grill-with-docs</strong></td>
+<td>user</td>
+<td><code>grilling</code>, <code>domain-modeling</code></td>
+<td>Before Step 1, on domain-heavy work</td>
+</tr>
+<tr>
+<td><strong>grilling</strong></td>
+<td>model</td>
+<td>(leaf)</td>
+<td>Pulled by the two above</td>
+</tr>
+<tr>
+<td><strong>domain-modeling</strong></td>
+<td>model</td>
+<td>(leaf)</td>
+<td>Pulled by grill-with-docs, runs inline</td>
+</tr>
+<tr>
+<td><strong>codebase-design</strong></td>
+<td>model</td>
+<td>(leaf)</td>
+<td>Consulted during Steps 1 to 3</td>
+</tr>
+<tr>
+<td><strong>improve-codebase-architecture</strong></td>
+<td>user</td>
+<td><code>codebase-design</code>, <code>grilling</code>,
+<code>domain-modeling</code></td>
+<td>Standalone, every few days</td>
+</tr>
+<tr>
+<td><strong>tdd</strong></td>
+<td>model</td>
+<td><code>codebase-design</code></td>
+<td>Step 3, alongside Superpowers</td>
+</tr>
+<tr>
+<td><strong>diagnosing-bugs</strong></td>
+<td>model</td>
+<td>(leaf)</td>
+<td>Any bug report</td>
+</tr>
+<tr>
+<td><strong>wizard</strong></td>
+<td>user</td>
+<td>(leaf)</td>
+<td>Promotion and provisioning</td>
+</tr>
+<tr>
+<td><strong>writing-for-agents</strong></td>
+<td>model</td>
+<td>(leaf)</td>
+<td>Any edit to this repo’s own docs</td>
+</tr>
+<tr>
+<td><strong>wait-what</strong></td>
+<td>user</td>
+<td>(leaf)</td>
+<td>Any moment a reply does not land</td>
+</tr>
+<tr>
+<td><strong>handoff</strong></td>
+<td>user</td>
+<td>(leaf)</td>
+<td>End of a long session</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="tier-a-alignment-before-any-code">Tier A Alignment Before Any
+Code</h2>
+<h3 id="grill-me-and-grilling">grill-me and grilling</h3>
+<p><strong>What it does.</strong> <code>grilling</code> turns the agent
+into an adversarial interviewer. It maps your request as a
+<strong>design tree</strong>, computes the <strong>frontier</strong>
+(every decision whose prerequisites are already settled), and asks that
+entire frontier in one numbered round, each question carrying a
+recommended answer. You answer the round, the frontier recomputes, and
+it asks again until the tree is exhausted. <code>grill-me</code> is a
+four-line user-invoked wrapper whose entire body is an instruction to
+call <code>grilling</code>.</p>
+<p><strong>Why it is included.</strong> This is the highest-value skill
+in the repo and the one that most directly serves
+<code>Test_Bed</code>‘s stated mission. <code>SE_Discipline.md</code>
+promises a non-expert can state a goal in plain English; the unaddressed
+risk in that promise is that the agent builds the wrong thing
+confidently. Pocock’s diagnosis is Fred Brooks’ <strong>design
+concept</strong>, the shared and invisible theory of what is being
+built:</p>
+<blockquote>
+<p>It’s not an asset. It’s not something you can put in a markdown file.
+It is the invisible sort of theory of what you’re building.</p>
+</blockquote>
+<p>Crucially, the round format is what makes this usable by a
+non-expert. Every question ships with a recommended answer, so a whole
+round can be answered <code>1A, 2B, 3C</code>. Theo, initially
+sceptical, was converted by exactly this:</p>
+<blockquote>
+<p>This is great. I’m actually disagreeing with the recommended answers
+pretty often, too. This is actually going to help me. I’m annoyed.</p>
+</blockquote>
+<p>One design detail matters for <code>Test_Bed</code>: <strong>finding
+facts is the agent’s job, never the user’s.</strong> When a frontier
+question needs a fact from the filesystem, <code>grilling</code>
+dispatches a sub-agent rather than asking the human. Only genuine
+<em>decisions</em> reach the user. That is precisely the division of
+labour <code>SE_Discipline.md</code> already asks for.</p>
+<p><strong>When it is invoked.</strong> Before OpenSpec Step 1. It
+replaces, rather than supplements, Claude Code’s plan mode and
+Superpowers’ <code>brainstorming</code> for substantial work. Pocock is
+explicit about preferring it to plan mode, on the grounds that plan mode
+“is extremely eager to create an <em>asset</em>” instead of reaching
+shared understanding first.</p>
+<p><strong>How to call it.</strong> Type it. It is user-invoked by
+design and the model cannot reach it. Give it a target in the same
+breath.</p>
+<pre><code>/grill-me I want to add a CSV export to the audit report screen.</code></pre>
+<pre><code>/grill-me Grill me about this repo itself: the goals in WHAT_THIS_DIR_IS.md,
+everything in CLAUDE.md and SE_Discipline.md. I want to be sure we agree on what
+we are building before I start the next project.</code></pre>
+<p>The second example is Theo’s exact move, aimed at a project rather
+than a feature, and it surfaced three structural contradictions in his
+repo on the first pass. It is worth running once against
+<code>Test_Bed</code> before any project work begins.</p>
+<p><strong>Best practice.</strong> Do not stop at round one. The value
+is in rounds two and three, where the questions get uncomfortable.
+Expect 40 to 100 questions total on a substantial change. Do not let the
+agent act on the outcome until it confirms the frontier is empty.</p>
+<h3 id="grill-with-docs-and-domain-modeling">grill-with-docs and
+domain-modeling</h3>
+<p><strong>What it does.</strong> <code>grill-with-docs</code> is a
+two-line user-invoked skill that calls <code>grilling</code>
+<strong>and</strong> <code>domain-modeling</code> together.
+<code>domain-modeling</code> is the active discipline of building a
+project’s shared vocabulary: it challenges terms that conflict with the
+existing glossary, sharpens fuzzy language, stress-tests relationships
+with concrete edge-case scenarios, cross-references claims against the
+code, and writes resolved terms into <code>CONTEXT.md</code> the moment
+they crystallise. It also offers an ADR, but only when a decision is
+hard to reverse, surprising without context, and the result of a real
+trade-off.</p>
+<p><strong>Why it is included.</strong> This is Pocock’s answer to
+failure mode #2, the agent being too verbose, and it borrows Eric Evans’
+<strong>ubiquitous language</strong> from domain-driven design.</p>
+<blockquote>
+<p>With a ubiquitous language, conversations among developers and
+expressions of the code are all derived from the same domain model.</p>
+</blockquote>
+<p>The payoff he reports is not merely cosmetic:</p>
+<blockquote>
+<p>By reading the thinking traces of the AI, it not only improves the
+planning, but it allows the AI to think in a less verbose way, and
+actually means that the implementation is more aligned with what you
+actually planned.</p>
+</blockquote>
+<p>For <code>Test_Bed</code> specifically, <code>CONTEXT.md</code> is
+the missing artifact that makes the other selected skills work:
+<code>tdd</code> reads it so test names match domain language,
+<code>diagnosing-bugs</code> reads it to build a mental model of the
+modules, and <code>improve-codebase-architecture</code> reads it so
+candidates are described as “the Order intake module” rather than “the
+FooBarHandler”. Install the glossary and three other skills get sharper
+for free.</p>
+<p>There is real but partial overlap with Compound Engineering’s
+<code>CONCEPTS.md</code>. The difference is direction:
+<code>/ce-compound</code> writes vocabulary down <em>after</em> a
+problem is solved, as a learning; <code>domain-modeling</code>
+challenges and sharpens vocabulary <em>during</em> design. Keep both,
+and keep them in separate files.</p>
+<p><strong>When it is invoked.</strong> <code>grill-with-docs</code>
+replaces <code>grill-me</code> whenever the work introduces or disturbs
+domain concepts, which on a greenfield project is most of the time.
+<code>domain-modeling</code> also fires on its own whenever someone is
+editing <code>CONTEXT.md</code> or writing an ADR.</p>
+<p><strong>How to call it.</strong></p>
+<pre><code>/grill-with-docs We need a promotion path from this repo to Dymon PROD.
+I do not think we agree on what &quot;promotion&quot; or &quot;rework&quot; actually mean.</code></pre>
+<p><strong>Best practice.</strong> Keep <code>CONTEXT.md</code> a
+glossary and nothing else. The skill is emphatic:
+“<code>CONTEXT.md</code> should be totally devoid of implementation
+details. Do not treat <code>CONTEXT.md</code> as a spec, a scratch pad,
+or a repository for implementation decisions.” Resist the pull to grow
+it into a design doc, which is what <code>openspec/</code> is for.</p>
+<hr />
+<h2 id="tier-b-design-and-architecture">Tier B Design and
+Architecture</h2>
+<h3 id="codebase-design">codebase-design</h3>
+<p><strong>What it does.</strong> A pure reference skill: the shared
+vocabulary and principles for designing <strong>deep modules</strong>,
+meaning a lot of behaviour behind a small interface, placed at a clean
+seam and testable through that interface. It fixes seven terms precisely
+(<strong>module</strong>, <strong>interface</strong>,
+<strong>implementation</strong>, <strong>depth</strong>,
+<strong>seam</strong>, <strong>adapter</strong>,
+<strong>leverage</strong>, <strong>locality</strong>) and forbids the
+loose substitutes, “component”, “service”, “API”, “boundary”.</p>
+<p><strong>Why it is included.</strong> This is the largest genuine gap
+in the current bundle, and it is the intellectual core of Pocock’s
+entire argument. His thesis rests on Ousterhout:</p>
+<blockquote>
+<p>Complexity is anything related to the structure of a software system
+that makes it hard to understand and modify the system.</p>
+</blockquote>
+<p>and on the consequence he draws from it:</p>
+<blockquote>
+<p><strong>Bad code is the most expensive it’s ever been.</strong>
+Because if you have a code base that’s hard to change, you’re not able
+to take all of the bounty that AI can offer.</p>
+</blockquote>
+<p>karpathy-skills tells the agent not to over-engineer, which is a
+<em>negative</em> constraint. Nothing in the bundle gives it a
+<em>positive</em> vocabulary for what good structure looks like. That
+asymmetry is why AI codebases drift toward what Pocock calls a grid of
+shallow blobs, which the agent then cannot navigate.</p>
+<p>Three principles here are immediately usable as review criteria:</p>
+<ul>
+<li><strong>The deletion test.</strong> Imagine deleting the module. If
+complexity vanishes, it was a pass-through. If complexity reappears
+across N callers, it was earning its keep.</li>
+<li><strong>The interface is the test surface.</strong> If you want to
+test past the interface, the module is the wrong shape.</li>
+<li><strong>One adapter means a hypothetical seam. Two adapters means a
+real one.</strong> Do not introduce a seam unless something actually
+varies across it.</li>
+</ul>
+<p><strong>When it is invoked.</strong> Model-invoked, and it should
+stay that way. It fires whenever a module interface is being designed or
+a seam placed, and <code>tdd</code> and
+<code>improve-codebase-architecture</code> both explicitly call it for
+vocabulary.</p>
+<p><strong>How to call it.</strong> Usually you do not. It reaches
+itself. To force it, name the vocabulary:</p>
+<pre><code>Before we write this, use the codebase-design vocabulary. Where should the seam go,
+and is this module deep or shallow?</code></pre>
+<p><strong>Best practice.</strong> Treat it as a dictionary, not a
+procedure. The skill says so itself: it “is a reference to consult, not
+a session to run.” Its <code>DESIGN-IT-TWICE.md</code> companion, which
+fans out parallel sub-agents to design one interface several radically
+different ways, is worth reaching for on genuinely load-bearing
+interfaces only.</p>
+<h3 id="improve-codebase-architecture">improve-codebase-architecture</h3>
+<p><strong>What it does.</strong> Surveys a codebase for
+<strong>deepening opportunities</strong>, refactors that turn shallow
+modules into deep ones. It scopes by walking recent commit history to
+find hot spots, spawns a sub-agent to explore, then writes a
+self-contained HTML report to the OS temp directory with a card per
+candidate: files involved, the friction, the proposed change in plain
+English, benefits framed as locality and leverage, a before and after
+diagram, and a strength badge of <code>Strong</code>,
+<code>Worth exploring</code>, or <code>Speculative</code>. It opens the
+report, asks which candidate you want, then hands off to
+<code>grilling</code> to walk that decision.</p>
+<p><strong>Why it is included.</strong> It is the maintenance
+counterpart to <code>codebase-design</code>, and it is the only skill in
+either the Pocock repo or the existing bundle that periodically asks “is
+this codebase still easy to change?” without being prompted by a bug.
+Pocock recommends running it every few days. Its own README is candid
+about the limits, which is a point in its favour: “It is a survey, not a
+rescue: on a genuinely old codebase it will find real candidates, but it
+won’t untangle the mud for you.”</p>
+<p>The HTML report is a real asset for <code>Test_Bed</code>’s purpose.
+A visual before-and-after of an architectural argument is exactly the
+artifact that travels well to a reviewer in central IT who was not in
+the session.</p>
+<p><strong>When it is invoked.</strong> Standalone and periodic, not
+part of a feature pipeline. It sits naturally next to
+<code>/ce-compound</code> at the close of a cycle. It writes nothing
+into the repo, so it is safe to run speculatively.</p>
+<p><strong>How to call it.</strong></p>
+<pre><code>/improve-codebase-architecture</code></pre>
+<pre><code>/improve-codebase-architecture Focus on the validation layer, I keep breaking it.</code></pre>
+<p><strong>Best practice.</strong> Give it a direction when you have
+one; it skips the hot-spot inference and goes straight there. Do not
+accept a candidate on the strength of the report alone, the grilling
+loop after your pick is where the decision actually gets made.</p>
+<hr />
+<h2 id="tier-c-build-and-debug">Tier C Build and Debug</h2>
+<h3 id="tdd">tdd</h3>
+<p><strong>What it does.</strong> The reference that makes a red-green
+loop produce tests worth keeping. Its distinctive contribution is the
+<strong>seam</strong>: the public boundary you test at. The rule is
+blunt, “<strong>Test only at pre-agreed seams.</strong> Before writing
+any test, write down the seams under test and confirm them with the
+user. No test is written at an unconfirmed seam.” It also names three
+anti-patterns precisely: <strong>implementation-coupled</strong> tests,
+<strong>tautological</strong> tests whose assertion recomputes the
+expected value the way the code does, and <strong>horizontal
+slicing</strong>, writing all tests first and then all
+implementation.</p>
+<p><strong>Why it is included, carefully.</strong> Superpowers already
+enforces red-green-refactor, and <code>SE_Discipline.md</code> already
+makes a failing test non-negotiable. So this is not included for the
+loop. It is included for the three things Superpowers does not name: the
+seam-agreement gate, the tautological-test trap, and the anti-cheat
+argument for why order matters.</p>
+<blockquote>
+<p>It tends to try to cheat at the tests, because it’s doing it in
+layers: it will do the entire implementation and then do the entire test
+layer just below it. Using this technique it is generally a lot harder
+to cheat, because it’s instrumenting the code <em>before</em> it’s
+writing the code.</p>
+</blockquote>
+<p>That is a sharper justification than “tests are good”, and it is the
+one worth putting in front of a reviewer at Dymon. The seam-agreement
+gate also gives the non-expert human a concrete decision to make that
+they are actually qualified to make, which fits this repo’s operating
+model.</p>
+<p><strong>When it is invoked.</strong> Step 3 of the
+<code>SE_Discipline.md</code> pipeline, concurrently with Superpowers.
+See <a href="#two-debugging-disciplines-firing-at-once">Two Debugging
+Disciplines Firing at Once</a> for the precedence rule that keeps them
+from arguing.</p>
+<p><strong>How to call it.</strong> Model-invoked. To force the seam
+conversation explicitly:</p>
+<pre><code>Before you write any test for this, list the seams you intend to test at and confirm
+them with me.</code></pre>
+<p><strong>Best practice.</strong> Note the skill’s own scope limit,
+which contradicts common practice: “<strong>Refactoring is not part of
+the loop.</strong> It belongs to the review stage.” If adopted, this
+changes what <code>/ce-code-review</code> is responsible for, and that
+should be a conscious decision rather than a surprise.</p>
+<h3 id="diagnosing-bugs">diagnosing-bugs</h3>
+<p><strong>What it does.</strong> A six-phase gated diagnosis loop.
+Phase 1 is the whole skill: build a <strong>tight, red-capable feedback
+loop</strong> before forming any hypothesis. It offers ten ranked ways
+to construct one, from a failing test through a replayed trace to a fuzz
+loop to a human-in-the-loop bash script as last resort. Phase 1
+completes only when you can name one command you have already run, that
+drives the real bug path, asserts the user’s exact symptom, is
+deterministic, is fast, and is agent-runnable. Then: reproduce and
+minimise, generate three to five <em>falsifiable</em> ranked hypotheses
+before testing any, instrument one variable at a time with tagged logs,
+write the regression test before the fix, and clean up.</p>
+<p><strong>Why it is included.</strong> Theo’s audit, run against his
+own agent logs across six machines, ranked this first of all Pocock
+skills, and his verdict after days of use was concrete: “my agents find
+the root cause and can communicate what’s wrong much more
+effectively.”</p>
+<p>Superpowers’ <code>systematic-debugging</code> covers the same ground
+in outline. Two things here are sharper. First, the gate is mechanical
+rather than aspirational: “If you catch yourself reading code to build a
+theory before this command exists, <strong>stop: jumping straight to a
+hypothesis is the exact failure this skill prevents.</strong> No
+red-capable command, no Phase 2.” Second, Phase 5 contains a finding
+that matters for this repo’s promotion mission: if no correct seam
+exists for the regression test, <strong>that itself is the
+finding</strong>, and the architecture is preventing the bug from being
+locked down. That converts a debugging session into architectural
+evidence.</p>
+<p>It also ships a <code>Redact</code> section requiring secrets to be
+replaced with <code>&lt;REDACTED&gt;</code> before any output is shown,
+which is directly relevant to anything heading toward Dymon PROD.</p>
+<p><strong>When it is invoked.</strong> Automatically, on any report of
+something broken, throwing, failing, or slow.</p>
+<p><strong>How to call it.</strong> Model-invoked; it fires on “debug
+this” or a pasted stack trace. To force the discipline when it has
+not:</p>
+<pre><code>Use diagnosing-bugs. Do not theorise until you have a command that goes red on this.</code></pre>
+<p><strong>Best practice.</strong> Let it show you the ranked hypotheses
+before it tests them. The skill asks for this checkpoint explicitly
+because the human often re-ranks instantly, and it is a cheap
+intervention with a large payoff.</p>
+<h3 id="wizard">wizard</h3>
+<p><strong>What it does.</strong> Generates an interactive bash script
+that walks a human through a procedure only a human can perform. It
+opens each URL, says exactly what to click and copy, captures values,
+writes them where they belong (<code>.env</code>, GitHub secrets),
+confirms at each stage, and shows how many stages remain. The UX library
+is fixed and must never be hand-edited; the agent’s job is only to scope
+the procedure and author its stages.</p>
+<p><strong>Why it is included.</strong> This is the one selected skill
+chosen for <code>Test_Bed</code>‘s <em>mission</em> rather than its
+code. The repo exists to prove that AI Fellows’ output can be promoted
+to Dymon PROD with minimal rework by central IT. A promotion necessarily
+contains steps the agent cannot take: a credential issued by IT, a
+dashboard only an administrator can reach, a cutover someone must
+authorise. Today those steps live in prose in
+<code>DEPLOYMENT_CHECKLIST.md</code> on the parked ZZ branch, which is
+exactly the form that rots. A wizard turns them into a runnable,
+resumable, confirmable script.</p>
+<p>Theo, who had no such need, still rated it highly on sight: “I can
+think of, like, four things I should have used it for yesterday.”</p>
+<p><strong>When it is invoked.</strong> At a promotion boundary, or when
+provisioning anything. Not during normal development.</p>
+<p><strong>How to call it.</strong> Model-invoked, but in practice you
+will describe the situation:</p>
+<pre><code>Build me a wizard for handing this project to central IT: the secrets they need to
+create, the env vars we need back, and the sign-off gate.</code></pre>
+<p><strong>Best practice.</strong> The skill warns against inventing UI
+steps it cannot verify: “Where you don’t actually know the current UI or
+the exact command, say so and ask the user or check the docs: never
+invent steps that may not exist.” Hold it to that. Wizards are ephemeral
+by default; commit one only when the path should be repeatable, which
+for a promotion path it should be.</p>
+<hr />
+<h2 id="tier-d-working-with-the-agent">Tier D Working With the
+Agent</h2>
+<h3 id="writing-for-agents">writing-for-agents</h3>
+<p><strong>What it does.</strong> The reference for writing any document
+an agent consumes: a skill, a <code>CLAUDE.md</code>, an
+<code>AGENTS.md</code>, or anything reached by a pointer. It supplies a
+vocabulary that is unusually precise. A <strong>context pointer</strong>
+names out-of-context material and encodes the condition for reaching it,
+and its <em>wording</em>, not its target, decides whether the agent gets
+there. The <strong>two loads</strong> are context load, paid on every
+turn by always-loaded material, and cognitive load, paid by the human.
+The <strong>information hierarchy</strong> ranks material as in-file
+step, in-file reference, or disclosed reference behind a pointer.
+<strong>Completion criteria</strong> end every step, and vague ones
+invite <strong>premature completion</strong>.</p>
+<p><strong>Why it is included.</strong> <code>Test_Bed</code>’s actual
+product is agent-facing markdown. <code>CLAUDE.md</code>,
+<code>SE_Discipline.md</code>, <code>RISK_TIERS.md</code>, and whatever
+the next project adds <em>are</em> the deliverable that has to survive
+contact with central IT. Nothing in the existing four frameworks says
+how to write them well. This is the only skill in the repo aimed
+squarely at that, and Theo, who ranked it second overall, explains the
+failure it prevents:</p>
+<blockquote>
+<p>Agents are really bad at writing instructions to other agents. If you
+let your agents write skills for you, write markdown for you, write
+prompts to subagents for you, all those types of things, it can do a
+very bad job.</p>
+</blockquote>
+<p>The concept most immediately applicable here is the two loads, since
+it gives a principled answer to a question this repo keeps facing: what
+belongs in the always-loaded <code>CLAUDE.md</code> versus behind a
+pointer to <code>SE_Discipline.md</code>.</p>
+<p><strong>When it is invoked.</strong> Automatically when creating or
+editing a skill, <code>AGENTS.md</code>, or <code>CLAUDE.md</code>.
+Which means, in this repo, often.</p>
+<p><strong>How to call it.</strong></p>
+<pre><code>Rewrite the Step 0 triage section of SE_Discipline.md. Apply writing-for-agents:
+sharpen the completion criterion and tell me what should move behind a pointer.</code></pre>
+<p><strong>Best practice.</strong> Use it as the standing review lens
+for the changes this very document proposes at <a href="#proposed-changes-to-claude.md">Proposed Changes to CLAUDE.md</a>.
+It also contains the most useful single warning for a repo like this
+one, <strong>sprawl</strong>: a document simply too long, even when
+every line is live and unique.</p>
+<h3 id="wait-what">wait-what</h3>
+<p><strong>What it does.</strong> Seven lines. User-invoked. It tells
+the agent that its last message did not land and to re-pitch it with
+context, in ASD-STE100 Simplified Technical English, using the
+vocabulary from <code>CONTEXT.md</code>.</p>
+<p><strong>Why it is included.</strong> It costs nothing, it is
+impossible to misuse, and it is aimed exactly at this repo’s stated
+user. <code>SE_Discipline.md</code> promises that the human “does not
+need to read the rest” and can just answer prompts. The unhandled case
+in that promise is the moment the agent says something the human does
+not understand, where the options today are to bluff or to derail the
+session. One command fixes that. The skill’s own documentation is honest
+about its limits: it repairs one message and does not prevent the next
+one, and the real cure is the shared language built by
+<code>grill-with-docs</code>.</p>
+<p><strong>When it is invoked.</strong> Any time, mid-session, the
+moment a reply does not land.</p>
+<p><strong>How to call it.</strong></p>
+<pre><code>/wait-what</code></pre>
+<p><strong>Best practice.</strong> If you find yourself reaching for it
+repeatedly in one project, that is a signal to run
+<code>/grill-with-docs</code> and build the glossary, not to keep
+patching individual messages.</p>
+<h3 id="handoff">handoff</h3>
+<p><strong>What it does.</strong> Compacts the current conversation into
+a handoff document so a fresh agent can continue, saved to the OS temp
+directory rather than the workspace. It includes a “suggested skills”
+section naming what the next agent should reach for, refuses to
+duplicate content already captured in specs, plans, ADRs, issues,
+commits, or diffs, referencing them by path instead, and redacts secrets
+and personal data.</p>
+<p><strong>Why it is included.</strong> Pocock’s workshop argues that an
+LLM measurably degrades past roughly 100K tokens regardless of the
+advertised window, and that the correct response is to clear rather than
+compact:</p>
+<blockquote>
+<p>Compacting leaves a lossy written history; clearing returns the model
+to an identical known state every time.</p>
+</blockquote>
+<p><code>handoff</code> is what makes clearing survivable. The bundle
+has no equivalent. The redaction requirement and the refusal to
+duplicate committed artifacts both matter for a repo whose output is
+destined for review.</p>
+<p><strong>When it is invoked.</strong> At the end of a long working
+session, or before a deliberate context clear.</p>
+<p><strong>How to call it.</strong> It takes an argument describing what
+the next session is for, and tailors the document to it.</p>
+<pre><code>/handoff Next session picks up the CSV export work and needs to finish the seam tests.</code></pre>
+<p><strong>Best practice.</strong> Note that it writes to the OS temp
+directory on purpose. If a handoff is worth keeping in the repo, that is
+a sign the content belongs in an OpenSpec change or an ADR instead.</p>
+<hr />
+<h2 id="what-i-left-out-and-why">What I Left Out and Why</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Skill</th>
+<th>Reason for exclusion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>to-spec</code>, <code>to-tickets</code>,
+<code>implement</code>, <code>triage</code>, <code>wayfinder</code></td>
+<td>This is Pocock’s “Main Flow”, and it is a direct competitor to
+OpenSpec plus Compound Engineering rather than a complement. Installing
+it would give <code>Test_Bed</code> two full pipelines racing for the
+same job. Theo, with no competing pipeline at all, still found it
+over-prescriptive: “I don’t necessarily want this much prescription on
+how I go step by step.”</td>
+</tr>
+<tr>
+<td><code>code-review</code></td>
+<td><code>/ce-code-review</code> already runs a far larger persona set.
+<strong>But harvest one thing from it:</strong> the Fowler smell
+baseline (Mysterious Name, Duplicated Code, Feature Envy, Data Clumps,
+Primitive Obsession, Repeated Switches, Shotgun Surgery, Divergent
+Change, Speculative Generality, Message Chains, Middle Man, Refused
+Bequest) is a compact, citable standard worth copying into this repo’s
+coding standards as prose. Its two-axis idea, separating Standards from
+Spec so neither masks the other, is also worth borrowing as a review
+habit without installing the skill.</td>
+</tr>
+<tr>
+<td><code>setup-matt-pocock-skills</code></td>
+<td>Its only job is configuring an issue tracker and triage labels for
+the five skills above, all excluded. Nothing in the selected set
+requires it. See <a href="#step-3-skip-the-setup-skill-deliberately">Step 3</a>.</td>
+</tr>
+<tr>
+<td><code>research</code></td>
+<td>Overlaps <code>/ce-best-practices-researcher</code> and
+<code>/ce-web-researcher</code>. Theo: “I don’t know if I would ever
+need that; I feel like the agents are pretty good at verifying their
+claims if you just ask.”</td>
+</tr>
+<tr>
+<td><code>prototype</code></td>
+<td>Genuinely good, and the LOGIC branch produces a single shareable
+HTML file a non-developer can drive, which suits this repo’s audience.
+Excluded only because <code>src/</code> does not exist yet.
+<strong>Revisit once there is a UI.</strong></td>
+</tr>
+<tr>
+<td><code>resolving-merge-conflicts</code></td>
+<td>Sound and short, but low frequency on a solo repo with no parallel
+agents yet. Cheap to add later.</td>
+</tr>
+<tr>
+<td><code>teach</code>, <code>to-questionnaire</code>,
+<code>ask-matt</code></td>
+<td>Not aimed at code quality or delivery speed. <code>ask-matt</code>
+is a router over skills that are mostly excluded, so it would route to
+things that are not installed.</td>
+</tr>
+<tr>
+<td>Everything in <code>misc/</code> and <code>in-progress/</code></td>
+<td>Explicitly not shipped in the plugin and not promoted by the
+author.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="conflicts-to-settle-before-installing">Conflicts to Settle
+Before Installing</h2>
+<p>These are real and should be decided deliberately rather than
+discovered.</p>
+<h3 id="two-debugging-disciplines-firing-at-once">Two Debugging
+Disciplines Firing at Once</h3>
+<p>Superpowers’ <code>systematic-debugging</code> and Pocock’s
+<code>diagnosing-bugs</code> are both model-invoked, both fire on a bug
+report, and both claim the same phase of work. The same is true of
+Superpowers’ <code>test-driven-development</code> against Pocock’s
+<code>tdd</code>. Left alone, the agent will pull in whichever
+description matches first and may load both.</p>
+<p><strong>Recommendation:</strong> make Superpowers primary for the
+<em>loop</em> and Pocock primary for the <em>entry gate</em>, and write
+the rule down where the agent reads it. Concretely, for debugging:
+<code>diagnosing-bugs</code> Phase 1 owns the requirement that a
+red-capable command exists before any hypothesis; once it does,
+Superpowers’ loop proceeds. For testing: Superpowers owns
+red-green-refactor; Pocock’s <code>tdd</code> is consulted as reference
+for seam agreement and the anti-pattern list. The wording for this goes
+in <code>SE_Discipline.md</code> below.</p>
+<h3 id="two-philosophies-of-control">Two Philosophies of Control</h3>
+<p>Pocock names Superpowers directly as the opposite philosophy: he
+wants the human holding the wheel, Superpowers wants the model to act.
+<code>Test_Bed</code> currently runs Superpowers, whose whole premise is
+auto-triggering. Adding five user-invoked procedures does not break
+that, but it does mean the human now has commands they must remember to
+type, which <code>SE_Discipline.md</code> currently promises they will
+not need. That promise should be amended honestly rather than quietly
+broken: the human does not need to type anything <em>except</em>
+<code>/grill-me</code> or <code>/grill-with-docs</code> at the start,
+and <code>/wait-what</code> when confused.</p>
+<h3 id="context-load">Context Load</h3>
+<p>Six new model-invoked descriptions join Superpowers’ set and Compound
+Engineering’s 40-plus commands. This is the cost Pocock warns about, and
+it is paid on every turn. <code>wizard</code> has already been taken out
+of that budget: it installs with
+<code>disable-model-invocation: true</code>, so its description never
+loads (see <a href="#decisions-taken">Decisions Taken</a>). If the
+session still feels unfocused, the next candidate is
+<code>writing-for-agents</code>, the lowest-frequency remaining ability,
+which can be converted the same way. Editable copies are what make that
+possible; the managed plugin cannot be edited.</p>
+<h3 id="house-style">House Style</h3>
+<p>A small irony worth knowing before you read the skills:
+<code>mattpocock/skills</code> forbids em dashes in its own prose, and
+Theo found nine on the <code>grilling</code> page alone. More
+practically, the skills are written in British-inflected prose with
+their own vocabulary. If this repo adopts a house style for agent-facing
+documents, the installed copies should be edited to match rather than
+left as a second dialect. That is an argument for the editable install
+route below.</p>
+<hr />
+<h2 id="installation">Installation</h2>
+<h3 id="choosing-the-install-route">Choosing the Install Route</h3>
+<p>There are two routes, and they differ in ways that matter here.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th></th>
+<th>Claude Code plugin</th>
+<th><code>skills</code> installer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Command</td>
+<td><code>claude plugins install mattpocock-skills</code></td>
+<td><code>npx skills@latest add mattpocock/skills</code></td>
+</tr>
+<tr>
+<td>What you get</td>
+<td>All 25 promoted skills, managed and read-only</td>
+<td>Only the skills you tick, as ordinary files you own</td>
+</tr>
+<tr>
+<td>Updates</td>
+<td>Automatic when the author ships</td>
+<td>Manual, via <code>npx skills update</code></td>
+</tr>
+<tr>
+<td>Editable</td>
+<td>No</td>
+<td>Yes</td>
+</tr>
+<tr>
+<td>Context cost</td>
+<td>All 25 descriptions</td>
+<td>Only what you installed</td>
+</tr>
+<tr>
+<td>Travels with the repo</td>
+<td>No, it is plugin state</td>
+<td>Yes, the files are committed</td>
+</tr>
+</tbody>
+</table>
+<p>The README is explicit that you should pick one: “installing both
+leaves you with every skill twice.”</p>
+<p><strong>Recommendation: use the <code>skills</code>
+installer.</strong> Three reasons specific to <code>Test_Bed</code>.
+First, the whole point of this exercise is a <em>small</em> set, and the
+plugin cannot give you one. Second, editability is what lets you resolve
+the conflicts above, flipping <code>wizard</code> to user-invoked or
+aligning house style. Third, and most important for the mission,
+committed files travel to Dymon with the repo, whereas plugin state does
+not; a reviewer in central IT can read exactly which disciplines were in
+force.</p>
+<p>This does depart from the pattern recorded for the other three
+frameworks, which are project-scoped plugins. That is a deliberate
+trade, and worth a decision rather than a default.</p>
+<h3 id="step-1-install-the-selected-skills">Step 1 Install the Selected
+Skills</h3>
+<p>Requires Node.js. Run from the repo root.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> A:/Admin/Jobs/2026/Jay_Project/SE_for_AI/Test_Bed</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="ex">npx</span> skills@latest add mattpocock/skills <span class="at">-a</span> claude-code <span class="at">-y</span>  <span class="at">-s</span> codebase-design <span class="at">-s</span> diagnosing-bugs <span class="at">-s</span> domain-modeling <span class="at">-s</span> grill-me  <span class="at">-s</span> grill-with-docs <span class="at">-s</span> grilling <span class="at">-s</span> handoff <span class="at">-s</span> improve-codebase-architecture  <span class="at">-s</span> tdd <span class="at">-s</span> wait-what <span class="at">-s</span> wizard <span class="at">-s</span> writing-for-agents</span></code></pre></div>
+<p><strong>Use the flags, not the interactive pickers.</strong> Run
+bare, the installer asks which agents to target; anything other than
+<code>claude-code</code> writes to <code>.agents/skills/</code>, which
+Claude Code does not read, and the install silently does nothing useful.
+<code>-s</code> must also be repeated per skill: a comma-separated list
+is ignored and installs nothing. Both failure modes were hit in practice
+on 2026-09-16 and are documented in <code>README.md</code> step 5a.</p>
+<p>The twelve, for reference:</p>
+<pre><code>codebase-design
+diagnosing-bugs
+domain-modeling
+grill-me
+grill-with-docs
+grilling
+handoff
+improve-codebase-architecture
+tdd
+wait-what
+wizard
+writing-for-agents</code></pre>
+<p>Do <strong>not</strong> select <code>setup-matt-pocock-skills</code>,
+despite the README’s instruction to include it, for the reason given in
+Step 3.</p>
+<p>After installing, add <code>disable-model-invocation: true</code> to
+the frontmatter of <code>.claude/skills/wizard/SKILL.md</code>, per <a href="#decisions-taken">Decisions Taken</a>.</p>
+<p>They land under <code>.claude/skills/&lt;name&gt;/</code>, alongside
+the existing <code>openspec-*</code> skills. Several skills ship
+companion files that must come with them: <code>tdd</code> needs
+<code>tests.md</code> and <code>mocking.md</code>;
+<code>codebase-design</code> needs <code>DEEPENING.md</code> and
+<code>DESIGN-IT-TWICE.md</code>; <code>domain-modeling</code> needs
+<code>CONTEXT-FORMAT.md</code> and <code>ADR-FORMAT.md</code>;
+<code>diagnosing-bugs</code> needs its <code>scripts/</code> directory;
+<code>wizard</code> needs <code>template.sh</code>;
+<code>improve-codebase-architecture</code> needs
+<code>HTML-REPORT.md</code>; <code>writing-for-agents</code> needs
+<code>SKILL-MECHANICS.md</code>. Verify these arrived, because a skill
+whose pointer targets are missing degrades silently.</p>
+<blockquote>
+<p><strong>Answering the mandate’s question directly:</strong> beyond
+placing markdown files, the only mandatory extra steps are ensuring
+those companion files and the <code>diagnosing-bugs/scripts/</code> and
+<code>wizard/template.sh</code> executables came across, and making the
+agent aware of the set via the <code>CLAUDE.md</code> and
+<code>SE_Discipline.md</code> edits below. There is no build step, no
+service to configure, and no issue tracker required for the selected
+set.</p>
+</blockquote>
+<h3 id="step-2-seed-context.md">Step 2 Seed CONTEXT.md</h3>
+<p>Four of the selected skills read <code>CONTEXT.md</code> and degrade
+politely without it. Create it through the skill rather than by hand, so
+the vocabulary is challenged as it is written:</p>
+<pre><code>/grill-with-docs Build the initial CONTEXT.md for this repo. Start from
+WHAT_THIS_DIR_IS.md and CLAUDE.md. I want the terms &quot;promotion&quot;, &quot;rework&quot;,
+&quot;AI Fellow&quot;, &quot;Track S&quot;, and &quot;bundle&quot; pinned down precisely.</code></pre>
+<h3 id="step-3-skip-the-setup-skill-deliberately">Step 3 Skip the Setup
+Skill Deliberately</h3>
+<p><code>/setup-matt-pocock-skills</code> configures an issue tracker,
+triage labels, and a domain doc layout. Every skill that consumes that
+configuration (<code>to-spec</code>, <code>to-tickets</code>,
+<code>triage</code>, <code>code-review</code>) is excluded from this
+selection. I verified the selected twelve against it: none require
+<code>docs/agents/issue-tracker.md</code>, and
+<code>domain-modeling</code> creates <code>CONTEXT.md</code> and
+<code>docs/adr/</code> lazily on its own. Running setup would add an
+<code>## Agent skills</code> block to <code>CLAUDE.md</code> describing
+a tracker nothing uses.</p>
+<p>If <code>to-spec</code> or <code>triage</code> are ever added, run
+setup first.</p>
+<h3 id="step-4-verify">Step 4 Verify</h3>
+<p>Do not assume the install worked. Check each claim.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. All twelve present, and nothing extra</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> .claude/skills/ <span class="kw">|</span> <span class="fu">sort</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Companion files arrived</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ls</span> .claude/skills/tdd/ .claude/skills/codebase-design/ <span class="dt">\</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>   .claude/skills/domain-modeling/ .claude/skills/wizard/</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. The six procedures are actually user-invoked</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a><span class="fu">grep</span> <span class="at">-l</span> <span class="st">&quot;disable-model-invocation: true&quot;</span> .claude/skills/<span class="pp">*</span>/SKILL.md</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a><span class="co">#    expect: grill-me, grill-with-docs, improve-codebase-architecture,</span></span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a><span class="co">#            wait-what, handoff, wizard</span></span></code></pre></div>
+<p>Then restart the session or run <code>/reload-plugins</code>, since
+skills load at session start. Functional check:</p>
+<pre><code>/wait-what</code></pre>
+<p>It should ask what did not land rather than reporting an unknown
+command. Then confirm an ability fires on its own by describing a bug
+and watching for <code>diagnosing-bugs</code> to engage without being
+named.</p>
+<hr />
+<h2 id="proposed-changes-to-claude.md">Proposed Changes to
+CLAUDE.md</h2>
+<p>Two edits. The first extends the bundle table from four layers to
+five; the second adds a short section the agent reads every session.</p>
+<p><strong>Edit 1.</strong> In <em>The installed bundle</em>, change the
+heading from “four layers” to “five layers” and append a row:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> **mattpocock-skills** | Alignment and design, the *are we sure* (adversarial grilling, deep-module vocabulary, shared glossary) | **Per-repo, committed** (<span class="in">`.claude/skills/`</span>, 12 of 25 skills) <span class="pp">|</span> <span class="in">`/grill-me`</span>, <span class="in">`/grill-with-docs`</span>, <span class="in">`/improve-codebase-architecture`</span>, <span class="in">`/wait-what`</span>, <span class="in">`/handoff`</span>, <span class="in">`/wizard`</span>; the other six auto-trigger <span class="pp">|</span></span></code></pre></div>
+<p><strong>Edit 2.</strong> Add after the bundle table:</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## The Pocock layer</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>Twelve skills from <span class="in">`mattpocock/skills`</span> are installed as committed, editable files</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>under <span class="in">`.claude/skills/`</span>. Six are **user-invoked** and the model cannot reach them:</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="in">`/grill-me`</span>, <span class="in">`/grill-with-docs`</span>, <span class="in">`/improve-codebase-architecture`</span>, <span class="in">`/wait-what`</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="in">`/handoff`</span>, <span class="in">`/wizard`</span>. Six fire on their own or are pulled in by another skill:</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="in">`grilling`</span>, <span class="in">`domain-modeling`</span>, <span class="in">`codebase-design`</span>, <span class="in">`tdd`</span>, <span class="in">`diagnosing-bugs`</span>,</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a><span class="in">`writing-for-agents`</span>.</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="in">`CONTEXT.md`</span> at the repo root is this project&#39;s glossary, the shared vocabulary you</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>and the human use for domain terms. Read it before exploring the codebase. Keep it</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>free of implementation detail: it is a glossary, not a spec. Architectural decisions</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>go in <span class="in">`docs/adr/`</span>. Both are maintained by <span class="in">`domain-modeling`</span>, which fires whenever</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>either is being edited.</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>Where these overlap the other layers, the precedence rules are in <span class="in">`SE_Discipline.md`</span>.</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>Do not run Pocock&#39;s <span class="in">`to-spec`</span>, <span class="in">`to-tickets`</span>, <span class="in">`implement`</span>, or <span class="in">`code-review`</span>: they are</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>deliberately not installed, because OpenSpec and Compound Engineering own those steps.</span></code></pre></div>
+<hr />
+<h2 id="proposed-changes-to-se_discipline.md">Proposed Changes to
+SE_Discipline.md</h2>
+<p>Four edits, in document order. These are the ones that actually
+change behaviour.</p>
+<p><strong>Edit 1.</strong> In the human-facing preamble, correct the
+promise about typing commands:</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>**Human: you do not need to read the rest.** State what you want in plain English and</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>answer the approval prompts. Two exceptions worth learning, because they pay for</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>themselves: start substantial work with <span class="in">`/grill-me`</span> (or <span class="in">`/grill-with-docs`</span> when the</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>project has its own jargon), and type <span class="in">`/wait-what`</span> any time an answer does not make</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>sense to you.</span></code></pre></div>
+<p><strong>Edit 2.</strong> Insert a new step before Step 1, and
+renumber:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Step 0.5 - Align (Pocock) - *human checkpoint*</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>For anything **Substantial**, run <span class="in">`/grill-me`</span> before touching OpenSpec. On work that</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>introduces or disturbs domain concepts, run <span class="in">`/grill-with-docs`</span> instead, so <span class="in">`CONTEXT.md`</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>and any ADRs are written as decisions crystallise.</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>Grilling maps the request as a design tree and asks the whole answerable frontier in</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>one numbered round, each question with a recommended answer, so the human can reply</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a><span class="in">`1A, 2B, 3C`</span>. Facts are yours to find: dispatch a sub-agent rather than asking the</span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a>human anything you could look up. Decisions are theirs.</span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>Do not proceed to Step 1 until the frontier is empty and the human confirms you have</span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>reached a shared understanding. Expect this to take several rounds; the questions get</span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>harder, and that is the point. The resulting conversation is the input to</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a><span class="in">`/openspec-propose`</span>, which makes the spec dramatically better.</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>This **replaces** plan mode and Superpowers&#39; <span class="in">`brainstorming`</span> for substantial work.</span></code></pre></div>
+<p><strong>Edit 3.</strong> In Step 3, add the seam gate and the
+precedence rule:</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Agree the seams before writing tests.** A **seam** is the public boundary you test</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  at. Write down the seams under test and confirm them with the human. No test is</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  written at an unconfirmed seam. Prefer existing seams, and use the highest one that</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  reaches the behaviour.</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Precedence where Superpowers and Pocock overlap:** Superpowers owns the</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  red-green-refactor loop. Pocock&#39;s <span class="in">`tdd`</span> is the reference consulted for seam choice</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  and for the anti-patterns: implementation-coupled tests, tautological tests whose</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  assertion recomputes the expected value the way the code does, and horizontal</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  slicing. Consult it, do not run it as a second loop.</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>**Design to the interface.** Use the <span class="in">`codebase-design`</span> vocabulary exactly: module,</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  interface, depth, seam, adapter, leverage, locality. Aim for deep modules, a lot of</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  behaviour behind a small interface. Apply the deletion test before adding any module.</span></code></pre></div>
+<p><strong>Edit 4.</strong> In <em>Non-negotiables</em>, replace the
+debugging bullet:</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="ss">6. </span>**Debugging is gated on a feedback loop.** Before any hypothesis, you must have one</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>   command you have already run that goes **red** on this specific bug: it drives the</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>   real code path, asserts the human&#39;s exact symptom, is deterministic, and is fast.</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>   No red-capable command, no hypothesis. If you cannot build one, say so explicitly,</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>   list what you tried, and ask for access or a redacted artifact. Once the loop is</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>   red, Superpowers&#39; <span class="in">`systematic-debugging`</span> loop proceeds as normal. If no correct</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>   seam exists for the regression test, that is itself a finding: report it as</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>   architectural debt rather than writing a test that gives false confidence.</span></code></pre></div>
+<hr />
+<h2 id="decisions-taken">Decisions Taken</h2>
+<p>All decision points in this plan were resolved by the author on
+<strong>2026-09-16</strong> in
+<code>Mandates/Pocock_MANDATE_02.md</code>, and the changes have been
+applied to <code>CLAUDE.md</code>, <code>SE_Discipline.md</code>, and
+<code>README.md</code>. This section is the record; the three files are
+the authority.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th>#</th>
+<th>Decision point</th>
+<th>Resolution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Precedence between Superpowers and Pocock on testing and
+debugging</td>
+<td><strong>Accepted as proposed.</strong> Superpowers owns the
+red-green-refactor loop and the debugging loop; Pocock owns the entry
+gates (seam agreement, red-capable command). Written into
+<code>SE_Discipline.md</code> Step 3 and Non-negotiable 6.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>The <code>SE_Discipline.md</code> promise that the human never types
+a command</td>
+<td><strong>Amend it honestly.</strong> The preamble, the session-flow
+section, and the tool map now say the human types <code>/grill-me</code>
+or <code>/grill-with-docs</code> to open substantial work and
+<code>/wait-what</code> when an answer does not land, and that Claude
+cannot type those itself.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Cutting <code>wizard</code> and <code>writing-for-agents</code> to
+save context</td>
+<td><strong>Split.</strong> <code>wizard</code> installs with
+<code>disable-model-invocation: true</code>, so it costs nothing in
+context but remains available as <code>/wizard</code> for the Dymon
+promotion path. <code>writing-for-agents</code> stays model-invoked: the
+author judged it important. The set stays at twelve, now 6 procedures
+and 6 abilities.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>British-inflected prose in the installed skills</td>
+<td><strong>Translate where obvious</strong>, as an optional
+post-install step (<code>README.md</code> step 5d), structure left
+untouched. Em dashes are explicitly fine in this repo and are not to be
+stripped.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Install route</td>
+<td><strong>Accepted: the <code>skills</code> installer</strong>, not
+the managed plugin. <code>README.md</code> Part A step 1 now explains
+Node, <code>npm</code>, and <code>npx</code> from zero, including the
+PowerShell execution-policy fix.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Making <code>CONTEXT.md</code>’s purpose clear to a new user</td>
+<td><strong>Done in two places.</strong> <code>README.md</code> step 5c
+explains what it is and names the four skills that read it;
+<code>CLAUDE.md</code> carries a <em>CONTEXT.md belongs to this
+layer</em> subsection for Claude.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Everything else proposed</td>
+<td><strong>Applied</strong>, plus a detailed install-and-verify
+procedure in <code>README.md</code> Part B steps 5 and 6, written for
+someone starting on a bare machine.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="what-changed-in-the-repo">What changed in the repo</h3>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>File</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CLAUDE.md</code></td>
+<td>Bundle table extended to five layers with a
+<code>mattpocock-skills</code> row; new <strong>The Pocock
+layer</strong> section (skill roster, <code>CONTEXT.md</code> rules,
+precedence, exclusions); workflow list gains step 0, Align.</td>
+</tr>
+<tr>
+<td><code>SE_Discipline.md</code></td>
+<td>Preamble and session-flow promise amended; new <strong>Step 0.5 —
+Align (Pocock)</strong>; Step 3 gains the seam gate, the
+Superpowers/Pocock precedence rule, and the deep-module rule;
+Non-negotiable 6 replaced with the red-capable-loop gate; tool map gains
+two Pocock rows; setup section now expects five tools.</td>
+</tr>
+<tr>
+<td><code>README.md</code></td>
+<td>Opening and tool table now five layers, with the two human-typed
+commands explained; Part A step 1 covers
+<code>node</code>/<code>npm</code>/<code>npx</code> from scratch; new
+<strong>Part B step 5</strong> (installer, the <code>wizard</code>
+frontmatter edit, the <code>CONTEXT.md</code> glossary, optional
+rewording); <strong>step 6</strong> expanded to five verification
+checks; Part C rewritten to open with <code>/grill-me</code>; update and
+commit guidance extended.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="still-open">Still open</h3>
+<ul>
+<li><strong><code>prototype</code></strong> was excluded only because
+<code>src/</code> does not exist. Revisit once this repo has a UI.</li>
+<li><strong>The Fowler smell baseline</strong> from Pocock’s
+<code>code-review</code> has not been copied into this repo’s coding
+standards. It was recommended as a harvest rather than an install, and
+no coding-standards file exists yet to receive it.</li>
+<li><strong><code>resolving-merge-conflicts</code></strong> remains a
+cheap later addition if parallel agents ever land here.</li>
+</ul>
+<hr />
+<h2 id="key-takeaways">Key Takeaways</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Summary</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Twelve, not twenty-five</strong></td>
+<td>Six user-invoked procedures the human types, six model-invoked
+abilities. The set is bounded by context load, which every ability pays
+on every turn, and by what the existing four layers already do.</td>
+</tr>
+<tr>
+<td><strong>The gaps are the case</strong></td>
+<td>Deep-module vocabulary, periodic architecture survey, writing
+agent-facing docs, human-only setup procedures, and message repair are
+things no current layer does at all. That, not novelty, is why Pocock is
+worth adding.</td>
+</tr>
+<tr>
+<td><strong>The overlaps are the exclusions</strong></td>
+<td><code>to-spec</code>, <code>to-tickets</code>,
+<code>implement</code>, and <code>code-review</code> are a second full
+pipeline competing with OpenSpec and Compound Engineering. Excluding
+them is what keeps the bundle coherent.</td>
+</tr>
+<tr>
+<td><strong>Grilling is the highest-value single addition</strong></td>
+<td>It converts the repo’s promise that a non-expert can just state a
+goal into something safe, because every question ships a recommended
+answer and the agent finds its own facts. Run it against the repo itself
+before the next project.</td>
+</tr>
+<tr>
+<td><strong><code>CONTEXT.md</code> is the keystone
+artifact</strong></td>
+<td>Four of the twelve read it. Installing the glossary makes
+<code>tdd</code>, <code>diagnosing-bugs</code>, and
+<code>improve-codebase-architecture</code> sharper for free. Keep it a
+glossary, never a spec.</td>
+</tr>
+<tr>
+<td><strong>Debugging is gated, not guided</strong></td>
+<td>The contribution of <code>diagnosing-bugs</code> is a mechanical
+gate: no red-capable command, no hypothesis. And a missing test seam is
+architectural evidence, not an excuse.</td>
+</tr>
+<tr>
+<td><strong>Two philosophies now share the repo</strong></td>
+<td>Pocock wants the human driving, Superpowers wants the model acting.
+Both can run, but the precedence rules must be written into
+<code>SE_Discipline.md</code> rather than discovered mid-session.</td>
+</tr>
+<tr>
+<td><strong>Install editable, not managed</strong></td>
+<td>The plugin ships all 25 and cannot be trimmed or edited. The
+<code>skills</code> installer gives exactly twelve, committed to the
+repo, so the discipline travels to Dymon with the code and can be
+adapted to house style.</td>
+</tr>
+<tr>
+<td><strong>Setup is deliberately skipped</strong></td>
+<td><code>/setup-matt-pocock-skills</code> configures an issue tracker
+for skills that are not installed. Verified: none of the twelve require
+it.</td>
+</tr>
+<tr>
+<td><strong>Do not blindly copy</strong></td>
+<td>The strongest warning in the evidence base comes from the critical
+source, and it applies to this document too: treat the selection as a
+set of information to consider, not a set of steps to run.</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
